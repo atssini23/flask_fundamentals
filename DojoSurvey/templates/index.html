@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+  </head>
+  <body>
+
+    <h3>Submitted Info:</h3>
+    <form action='/result' method='post'>
+      Your Name: <input  type = 'text' name = 'name'>
+
+      Dojo Location:<select name="city">
+          <option value="san_jose">San Jose</option>
+        </select>
+        <br>
+
+        Favorite Language:<select name="language">
+          <option value="python">Python</option>
+        </select>
+        <br>
+
+        Comment (optional):<br>
+        <textarea name="comment" rows="4" cols="30"></textarea>
+        <br>
+
+        <div>
+         {% with messages = get_flashed_messages() %}
+           {% if messages %}
+             {% for message in messages %}
+               <p>{{message}}</p>
+             {% endfor %}
+           {% endif %}
+         {% endwith %}
+        </div>
+        
+        <input type="submit" value="Button">
+    </form>
+  </body>
+</html>
