@@ -1,0 +1,68 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Great Number Game</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}">
+ <!-- i tried -->
+  <style type="text/css">
+
+    #wrapper {
+     margin: auto;
+     margin-top: 30px;
+     width: 600px;
+     text-align: center;
+    }
+    #top_header{
+     text-align: center;
+     margin: auto;
+     margin-top: 30px;
+    }
+
+    #answer .right {
+      width: 400px;
+      height: 100px;
+      margin: auto;
+      background-color: green;
+      text-align: center;
+    }
+
+    #answer .wrong {
+      width: 400px;
+      height: 100px;
+      margin: auto;
+      background-color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div id="wrapper">
+    <div id="top_header">
+      <h1>Welcome to the Great Number Game!</h1>
+      <p>I am thinking of a number between 1 and 100</p>
+      <p>Take a guess!</p>
+    </div>
+    <div id="answer">
+      {% if is_correct == True %}
+      <div class="right">
+        It's RIGHT!!!!
+      </div>
+      {% elif is_correct == None %}
+
+      {% else %}
+        <div class="wrong">
+          It's WRONG!!!!
+        </div>
+      {% endif %}
+    </div>
+
+    <div id='form'>
+      <form action='/' method = 'POST'>
+        input integer from 1 to 100:<input type="number" name="num">
+        <input type='submit' value="Submit!" />
+      </form>
+    </div>
+</body>
+</html>

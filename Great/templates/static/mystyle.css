@@ -1,0 +1,28 @@
+/*and it didnt work*/
+#wrapper {
+ margin: auto;
+ margin-top: 30px;
+ width: 600px;
+ text-align: center;
+}
+#top_header{
+ text-align: center;
+ margin: auto;
+ margin-top: 30px;
+}
+
+#answer .right {
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  background-color: green;
+  text-align: center;
+}
+
+#answer .wrong {
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  background-color: red;
+  text-align: center;
+}

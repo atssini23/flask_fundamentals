@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Each Ninja</title>
+    <meta charset='utf-8' />
+  </head>
+  <body>
+
+      {% if color == 'blue': %}
+          {% set result = 'Leonardo' %}
+          <img src="{{ url_for('static', filename='img/leonardo.jpg') }}">
+      {% elif color == 'orange': %}
+          {% set result = 'Michelangelo' %}
+          <img src="{{ url_for('static', filename='img/michelangelo.jpg') }}">
+      {% elif color == 'red': %}
+          {% set result = 'Raphael' %}
+          <img src="{{ url_for('static', filename='img/raphael.jpg') }}">
+      {% elif color == 'purple': %}
+          {% set result = 'Donatello' %}
+          <img src="{{ url_for('static', filename='img/donatello.jpg') }}">
+      {% else %}
+          {% set result = 'Not a Ninja' %}
+          <img src="{{ url_for('static', filename='img/notapril.jpg') }}">
+      {% endif %}
+      <h4>{{ result }}</h4>
+
+  </body>
+</html>
